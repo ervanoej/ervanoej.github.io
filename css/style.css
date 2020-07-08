@@ -1,0 +1,67 @@
+.gradient-45deg-deep-purple-purple {
+    background: -webkit-linear-gradient(45deg,#6f2232,#c3073f)!important;
+    background: linear-gradient(45deg,#6f2232,#c3073f)!important;
+}
+
+.gradient-45deg-green-teal {
+    background: -webkit-linear-gradient(45deg,#00b542,#009ab5)!important;
+    background: linear-gradient(45deg,#00b542,#009ab5)!important;
+}
+
+body {
+font-family: 'Muli', sans-serif;
+background-color: #292e2b;
+}
+
+.logo {
+    display: inline-block;
+    height: 100%;
+}
+
+.logo>img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 175px; 
+    height: 52px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#body-content{
+      animation: 1.25s ease-out 0s 1 slideInFromLeft;
+}
+
+#favorite-team{
+    animation: 1.25s ease-out 0s 1 slideInFromBottom
+}
+
+.standing-crest{
+    width: 30px;
+    height: 30px;
+}
+
+.home-badge{
+    width: 72px;
+    height: 72px;
+}
+
+.cover-badge{
+    width: 128px;
+    height: 128px;
+}

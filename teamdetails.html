@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>giLaLiga</title>
+    <meta name="description" content="Your one stop portal for anything about La Liga" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shorcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple_icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#c62828" />
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="red darken-3" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="#" class="logo" id="logo-container"><img src="images/header.webp" alt="Header"></a>
+          <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">arrow_back</i>
+          </a>
+          <ul class="topnav right hide-on-med-and-down"></ul>
+          
+        </div>
+      </nav>
+    </div>
+
+    <div class="container" id="body-content"></div>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large waves-effect waves-light pink darken-1" id="favorite">
+      <i class="large material-icons favorite_btn">favorite_border</i>
+    </a>
+    </div>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large waves-effect waves-light red" id="delete">
+      <i class="material-icons">delete</i>
+    </a>
+    </div>
+    <div class="container" id="squad-table">
+    </div>
+    <div class="container" id="matches">
+     <div class="row">
+      <div class="col s12">
+        <h5 class="white-text center-align indigo darken-3"> Matches </h5>
+            <ul class="tabs z-depth-1 center-align">
+                <li class="tab col center-align"><a href="#finished">Finished</a></li>
+                <li class="tab col center-align"><a href="#scheduled">Scheduled</a></li>
+            </ul>            
+            <div id="finished" class="col s12">
+            </div>
+            <div id="scheduled" class="col s12">
+            </div>     
+      </div> 
+     </div>
+    </div>
+
+  <script src="js/materialize.min.js"></script>
+  <script type="module" src="js/details.js"></script>
+  </body>
+</html>
