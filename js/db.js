@@ -1,6 +1,6 @@
 import './idb.js';
 
-let dbPromised = idb.open('la-liga', 1, function(upgradeDb){
+const dbPromised = idb.open('la-liga', 1, function(upgradeDb){
 	let teamsObjectStore = upgradeDb.createObjectStore('teams', {
 		keyPath: 'id'
   });

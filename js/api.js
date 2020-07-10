@@ -1,5 +1,3 @@
-import {makeFavorite, getAllFavorite, getFavoritebyId, deleteFavoriteById} from "./db.js";
-
 const base_url = "https://api.football-data.org/v2";
 const TOKEN_KEY = `4aad05479a5e42fe83a8b8e6c685a323`;
 const get_teams = `${base_url}/competitions/2014/teams`;
@@ -22,10 +20,6 @@ function json(response) {
   return response.json();
 }
 
-function error(error) {
-  console.log("Error : " + error);
-}
-
 const fetchApi = url => {    
   return fetch(url, {
     headers: {
@@ -41,24 +35,24 @@ function getTeams() {
 }
 
 function getTeambyId() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let idParam = urlParams.get("id");
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get("id");
     return fetchApi(`${base_url}/teams/${idParam}`)
     .then(status)
     .then(json);
 }
 
 function getMatchesbyTeamScheduled() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let idParam = urlParams.get("id");
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get("id");
     return fetchApi(`${base_url}/teams/${idParam}/matches?status=SCHEDULED`)
     .then(status)
     .then(json);
 }
 
 function getMatchesbyTeamFinished() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let idParam = urlParams.get("id");
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get("id");
     return fetchApi(`${base_url}/teams/${idParam}/matches?status=FINISHED`)
     .then(status)
     .then(json);

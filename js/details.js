@@ -7,12 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
     loadMatchesbyTeamFinished();
     loadMatchesbyTeamScheduled();
 
-    let urlParams = new URLSearchParams(window.location.search);
-    let isFavorite = urlParams.get("favorited");
-    let idParam = urlParams.get("id");
-    let favBtn = document.getElementById("favorite");
-    let delBtn = document.getElementById("delete");
+    const urlParams = new URLSearchParams(window.location.search);
+    const isFavorite = urlParams.get("favorited");
+    const idParam = urlParams.get("id");
+    const favBtn = document.getElementById("favorite");
+    const delBtn = document.getElementById("delete");
     const id = parseInt(idParam);
+    const el = document.querySelectorAll(".tabs");
+    
+    M.Tabs.init(el);
 
     if (isFavorite) {
       favBtn.style.display = 'none';
@@ -21,9 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
       delBtn.style.display = 'none';
       loadTeamById();
     }
-
-    var el = document.querySelectorAll(".tabs");
-    M.Tabs.init(el);
 
     favBtn.onclick = function () {
       getTeambyId().then((team) => {

@@ -20,7 +20,10 @@ if (workbox) {
       	{ url: '/js/main.js', revision: '1' },
 	    { url: '/js/nav.js', revision: '1' },
 	    { url: '/js/register.js', revision: '1' },
-	]);
+	], 	{
+		
+  		ignoreURLParametersMatching: [/.*/]
+	});
 
     workbox.routing.registerRoute(
       new RegExp('/pages/'),

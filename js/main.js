@@ -27,7 +27,7 @@ function hideLoader() {
 }
 
 const loadAllTeams = () => {
-	let teams = getTeams();
+	const teams = getTeams();
 	teams.then(data => {
 	  let teamsHTML = `<h5 align="center" class="white-text"> Meet the Teams </h5><div class="row">`;
       data.teams.forEach((team) => {
@@ -57,7 +57,7 @@ const loadAllTeams = () => {
 }
 
 const loadTeamById = () => {
-	let teams = getTeambyId();
+	const teams = getTeambyId();
 	teams.then(data => {
 		let teamHTML = `        
            <div class="card">
@@ -102,7 +102,7 @@ const loadTeamById = () => {
 }
 
 const loadMatchesbyTeamScheduled = () => {
-	let scheduledMatches = getMatchesbyTeamScheduled();
+	const scheduledMatches = getMatchesbyTeamScheduled();
 	scheduledMatches.then(data => {
 		let teamHTML = ""
           data.matches.forEach((result) => {
@@ -132,7 +132,7 @@ const loadMatchesbyTeamScheduled = () => {
 }
 
 const loadMatchesbyTeamFinished = () => {
-	let finishedMatches = getMatchesbyTeamFinished();
+	const finishedMatches = getMatchesbyTeamFinished();
 	finishedMatches.then(data => {
 		let teamHTML = ""
           data.matches.forEach((result) => {
@@ -164,7 +164,7 @@ const loadMatchesbyTeamFinished = () => {
 }
 
 const loadStandings = () => {
-	let standings = getStandings();
+	const standings = getStandings();
 	standings.then(data => {
 		let standingsHTML = `<h5 align="center" class="white-text"> Standings </h5>
                           <table class="striped white-text">
@@ -209,7 +209,7 @@ const loadStandings = () => {
 }
 
 const loadTopScorers = () => {
-	let topScorers = getTopScorers();
+	const topScorers = getTopScorers();
 	topScorers.then(data => {
 		showLoader();
       let standingsHTML = `<h5 align="center" class="white-text"> Top Scorers </h5>
